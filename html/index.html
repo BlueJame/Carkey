@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	</head>
+	<body>
+	</body>
+	<script>
+		window.addEventListener('message', function(event) {
+			if (event.data.type == "lock") {
+				var msg = new Audio('./lock.ogg');
+				msg.volume = 0.5;
+				msg.play();
+			}
+			if (event.data.type == "unlock") {
+				var msg = new Audio('./unlock.ogg');
+				msg.volume = 0.5;
+				msg.play();
+			}
+		});
+	</script>
+</html>
